@@ -1,0 +1,62 @@
+<style>
+    .flight-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .flight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .flight-card h5 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .flight-card p {
+      color: #6c757d;
+      font-size: 0.875rem;
+      margin-bottom: 10px;
+    }
+
+    .flight-card .btn {
+      background-color: #007bff;
+      color: #fff;
+      font-size: 0.875rem;
+      border-radius: 5px;
+      padding: 8px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .flight-card .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .flight-list-container {
+      margin-top: 40px;
+    }
+  </style>
+
+
+
+{% set airline = frappe.db.get_value('Airplane', doc.airplane , 'airline') %}
+
+<div class="container flight-list-container">
+	<div class="row">
+		<div class="col-12">
+			<div class="flight-card">
+				<h5 class="font-weight-bold">{{ airline }}</h5>
+				<p class="text-muted">{{ doc.source_airport_code }} → {{ doc.destination_airport_code }}</p>
+				<p>{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} | {{ doc.time_of_departure }} | {{ frappe.utils.format_duration(doc.duration) }}</p>
+				<a href="{{ doc.route }}" class="btn">View Flight</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- this is a sample default list template -->

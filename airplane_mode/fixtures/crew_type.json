@@ -1,0 +1,86 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:31:15.890103",
+  "name": 1,
+  "type": "Flight attendant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:31:27.990835",
+  "name": 2,
+  "type": "Cabin Crew"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:31:53.924100",
+  "name": 4,
+  "type": "Captain"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:32:07.346444",
+  "name": 5,
+  "type": "Corporate flight Attendant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:32:15.177916",
+  "name": 6,
+  "type": "First Officer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:32:23.807727",
+  "name": 7,
+  "type": "Flight Attendant Supervisor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:32:35.027295",
+  "name": 8,
+  "type": "Purser"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:32:43.850197",
+  "name": 9,
+  "type": "Cabin Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:32:53.908790",
+  "name": 10,
+  "type": "Flight stewards"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:33:11.718321",
+  "name": 12,
+  "type": "Sensor Operator"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:31:42.554372",
+  "name": 3,
+  "type": "Flight Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Crew Type",
+  "modified": "2025-04-25 16:33:02.492773",
+  "name": 11,
+  "type": "Pilot"
+ }
+]

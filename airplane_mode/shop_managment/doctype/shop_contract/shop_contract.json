@@ -1,0 +1,253 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:con-{tenant}-{####}",
+ "creation": "2025-04-28 16:07:45.165521",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_information_section",
+  "tenant",
+  "shop",
+  "airport",
+  "column_break_cffm",
+  "party_user",
+  "status",
+  "is_signed",
+  "amended_from",
+  "contract_period_section",
+  "start_date",
+  "column_break_bezz",
+  "end_date",
+  "signee_details_section",
+  "signee",
+  "column_break_kwis",
+  "signed_on",
+  "contract_details_section",
+  "contract_template",
+  "contract_terms",
+  "section_break_ybkg",
+  "rent_amount",
+  "column_break_yfwk",
+  "security_deposit",
+  "authorised_by_section",
+  "signee_company",
+  "signed_by_company"
+ ],
+ "fields": [
+  {
+   "description": "per month",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yfwk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Unsigned\nActive\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_ybkg",
+   "fieldtype": "Section Break",
+   "label": "Rent Information"
+  },
+  {
+   "fieldname": "column_break_cffm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party_user",
+   "fieldtype": "Link",
+   "label": "Party User",
+   "options": "User"
+  },
+  {
+   "fieldname": "contract_period_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Period"
+  },
+  {
+   "fieldname": "column_break_bezz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shop",
+   "link_filters": "[[\"Shop\",\"status\",\"=\",\"Available\"]]",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Information"
+  },
+  {
+   "fieldname": "authorised_by_section",
+   "fieldtype": "Section Break",
+   "label": "Authorised By"
+  },
+  {
+   "fieldname": "signee_company",
+   "fieldtype": "Signature",
+   "label": "Signee (Company)"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.is_signed==1",
+   "fieldname": "signee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Signee Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "signee",
+   "fieldtype": "Data",
+   "label": "Signee",
+   "no_copy": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "signed_on",
+   "fieldtype": "Datetime",
+   "label": "Signed On"
+  },
+  {
+   "fieldname": "column_break_kwis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_signed",
+   "fieldtype": "Check",
+   "label": "Signed",
+   "no_copy": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "eval:doc.docstatus==0",
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "contract_template",
+   "fieldtype": "Link",
+   "label": "Contract Template",
+   "options": "Contract Template"
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Text Editor",
+   "label": "Contract Terms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "signed_by_company",
+   "fieldtype": "Link",
+   "label": "Signed By (Company)",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shop.airport",
+   "fetch_if_empty": 1,
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Shop Rent Payment",
+   "link_fieldname": "shop_contract"
+  }
+ ],
+ "modified": "2025-05-02 15:28:30.359436",
+ "modified_by": "Administrator",
+ "module": "Shop Managment",
+ "name": "Shop Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

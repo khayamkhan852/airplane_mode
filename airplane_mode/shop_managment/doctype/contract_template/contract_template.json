@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2025-05-01 14:53:01.810667",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "contract_terms",
+  "section_break_qvnw",
+  "contract_template_help"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Text Editor",
+   "label": "Contract Terms and Conditions"
+  },
+  {
+   "fieldname": "section_break_qvnw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contract_template_help",
+   "fieldtype": "HTML",
+   "label": "Contract Template Help",
+   "options": "<h4>Contract Template Example</h4>\n\n<pre>Contract for Tenant \n{{ tenant}}\n\n-Valid From : {{ start_date }} \n-Valid To : {{ end_date }}\n</pre>\n\n<h4>How to get fieldnames</h4>\n\n<p>The field names you can use in your Contract Template are the fields in the Contract for which you are creating the template. You can find out the fields of any documents via Setup &gt; Customize Form View and selecting the document type (e.g. Shop Contract)</p>"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-01 15:21:54.167097",
+ "modified_by": "Administrator",
+ "module": "Shop Managment",
+ "name": "Contract Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

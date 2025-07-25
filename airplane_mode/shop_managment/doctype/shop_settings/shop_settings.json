@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-01 18:34:49.947276",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_shop_rent_amount",
+  "column_break_kmim",
+  "disable_rent_reminders"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_shop_rent_amount",
+   "fieldtype": "Currency",
+   "label": "Default Shop Rent Amount",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "disable_rent_reminders",
+   "fieldtype": "Check",
+   "label": "Disable Rent Reminders"
+  },
+  {
+   "fieldname": "column_break_kmim",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-05-01 18:58:50.204125",
+ "modified_by": "Administrator",
+ "module": "Shop Managment",
+ "name": "Shop Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,65 @@
+<style>
+	.shop-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 1.5rem;
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+		transition: background-color 0.2s ease;
+  	}
+
+  	.shop-item:hover {
+    	background-color: #f0f8ff; /* subtle highlight */
+  	}
+
+  	.shop-details {
+    	flex-grow: 1;
+  	}
+
+  	.shop-title {
+    	font-weight: 700;
+    	font-size: 1.1rem;
+    	color: #0077a3; /* picnic blue */
+    	text-decoration: none;
+  	}
+
+  	.shop-title:hover {
+    	text-decoration: underline;
+  	}
+	
+  	.shop-meta {
+		color: #555;
+    	font-size: 0.9rem;
+    	margin-top: 0.3rem;
+  	}
+  
+	.shop-action {
+    	margin-left: 1rem;
+  	}
+  
+	.btn-primary {
+    	background-color: #00b4d8;
+    	color: white;
+    	border-radius: 4px;
+    	padding: 0.5rem 1rem;
+    	text-decoration: none;
+    	font-weight: 600;
+  	}
+  
+	.btn-primary:hover {
+    	background-color: #0077a3;
+  	}
+</style>
+
+<div class="shop-item">
+	<div class="shop-details">
+		<a href="{{ doc.route }}" class="shop-title">{{ doc.title or doc.name }}</a>
+		<div class="shop-meta">
+			Airport: {{ doc.airport }} &nbsp;|&nbsp; Status: {{ doc.status }} &nbsp;|&nbsp; Area: {{ doc.shop_area }} sq ft
+    	</div>
+  	</div>
+  	<div class="shop-action">
+    	<a href="{{ doc.route }}" class="btn-primary">View Details</a>
+  	</div>
+</div>

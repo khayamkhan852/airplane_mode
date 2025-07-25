@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RP-{tenant}-{YY}-{####}",
+ "creation": "2025-05-02 15:04:16.382497",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_information_section",
+  "posting_date",
+  "rent_from",
+  "column_break_ldxg",
+  "payment_method",
+  "rent_to",
+  "amended_from",
+  "section_break_zvnt",
+  "shop_contract",
+  "tenant",
+  "column_break_liak",
+  "shop",
+  "rent_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zvnt",
+   "fieldtype": "Section Break",
+   "label": "Contract Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Rent Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "shop_contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shop Contract",
+   "link_filters": "[[\"Shop Contract\",\"status\",\"=\",\"Active\"]]",
+   "options": "Shop Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_liak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "shop_contract.shop",
+   "fetch_if_empty": 1,
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_contract.tenant",
+   "fetch_if_empty": 1,
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ldxg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Link",
+   "label": "Payment Method",
+   "options": "Payment Method"
+  },
+  {
+   "bold": 1,
+   "fieldname": "rent_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Rent From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Rent To",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_contract.rent_amount",
+   "fetch_if_empty": 1,
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "non_negative": 1,
+   "precision": "2",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-07 16:35:24.040444",
+ "modified_by": "Administrator",
+ "module": "Shop Managment",
+ "name": "Shop Rent Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
